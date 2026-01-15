@@ -350,7 +350,7 @@ export const translations = {
       alerts: {
         badge: "Más Rápido del Mercado",
         title: "Alertas Inteligentes",
-        subtitle: "Sabe al instante cuando mencionan tus temas",
+        subtitle: "Sepa al instante cuando mencionan tus temas",
         time: "2-3 minutos",
         timeDesc: "después de mención parlamentaria",
         description: "Recibe notificaciones instantáneas cuando legisladores mencionan tus temas clave. Cada alerta incluye un clip de audio de 2 minutos para contexto inmediato.",
