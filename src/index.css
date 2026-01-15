@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* PARLEY Custom Theme */
+@theme {
+  /* Colors */
+  --color-parley-navy: #0A1628;
+  --color-parley-deep-blue: #1E3A5F;
+  --color-parley-slate: #7D8592;
+  --color-parley-steel: #4A6FA5;
+  --color-parley-gold: #B8985F;
+  --color-parley-blue: #4A90E2;
+
+  /* Extended palette */
+  --color-parley-light-gray: #F5F7FA;
+  --color-parley-gold-light: #D4BC8E;
+  --color-parley-gold-dark: #9A7B4A;
+
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utilities */
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility bg-gradient-navy {
+  background: linear-gradient(135deg, #0A1628 0%, #1E3A5F 100%);
+}
+
+@utility bg-gradient-gold {
+  background: linear-gradient(135deg, #B8985F 0%, #D4BC8E 100%);
+}

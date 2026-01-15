@@ -1,0 +1,6 @@
+# robots.txt for parleytech.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://parleytech.com/sitemap.xml
