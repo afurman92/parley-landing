@@ -28,6 +28,7 @@ export default function Hero() {
         {/* Animated feather element */}
         <motion.div
           className="absolute top-1/3 right-1/4 opacity-10"
+          aria-hidden="true"
           animate={{
             y: [0, -20, 0],
             rotate: [0, 5, 0],
@@ -80,21 +81,21 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.button
                 onClick={() => scrollToSection('contact')}
-                className="inline-flex items-center justify-center gap-2 bg-parley-gold hover:bg-parley-gold-light text-parley-navy font-semibold px-8 py-4 rounded-lg transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-parley-gold hover:bg-parley-gold-light text-parley-navy font-semibold px-8 py-4 rounded-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-parley-navy"
                 whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(184, 152, 95, 0.4)' }}
                 whileTap={{ scale: 0.98 }}
               >
                 {t.hero.cta}
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
               </motion.button>
 
               <motion.button
                 onClick={() => scrollToSection('features')}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg border border-white/20 transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg border border-white/20 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold focus-visible:ring-offset-2 focus-visible:ring-offset-parley-navy"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5" aria-hidden="true" />
                 {t.hero.ctaSecondary}
               </motion.button>
             </div>
@@ -121,7 +122,7 @@ export default function Hero() {
             <div className="relative bg-parley-deep-blue/50 backdrop-blur-sm rounded-2xl border border-white/10 p-4 shadow-2xl">
               {/* Dashboard Header */}
               <div className="flex items-center justify-between mb-4 pb-4 border-b border-white/10">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3" aria-hidden="true">
                   <div className="w-3 h-3 rounded-full bg-red-500" />
                   <div className="w-3 h-3 rounded-full bg-yellow-500" />
                   <div className="w-3 h-3 rounded-full bg-green-500" />

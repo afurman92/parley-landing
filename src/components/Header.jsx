@@ -20,10 +20,10 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center">
+          <a href="/" className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold rounded">
             <img
               src="/logo-white.png"
-              alt="PARLEY"
+              alt="PARLEY - Go to homepage"
               className="h-8 lg:h-10 w-auto"
             />
           </a>
@@ -32,19 +32,19 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-8">
             <button
               onClick={() => scrollToSection('features')}
-              className="text-white/80 hover:text-white transition-colors text-sm font-medium"
+              className="text-white/80 hover:text-white transition-colors text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold focus-visible:ring-offset-2 focus-visible:ring-offset-parley-navy rounded"
             >
               {t.nav.features}
             </button>
             <button
               onClick={() => scrollToSection('how-it-works')}
-              className="text-white/80 hover:text-white transition-colors text-sm font-medium"
+              className="text-white/80 hover:text-white transition-colors text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold focus-visible:ring-offset-2 focus-visible:ring-offset-parley-navy rounded"
             >
               {t.nav.howItWorks}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-white/80 hover:text-white transition-colors text-sm font-medium"
+              className="text-white/80 hover:text-white transition-colors text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold focus-visible:ring-offset-2 focus-visible:ring-offset-parley-navy rounded"
             >
               {t.nav.contact}
             </button>
@@ -55,7 +55,7 @@ export default function Header() {
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-1.5 text-white/80 hover:text-white transition-colors text-sm"
+              className="flex items-center gap-1.5 text-white/80 hover:text-white transition-colors text-sm p-2 -m-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold rounded"
               aria-label={`Switch to ${language === 'en' ? 'Spanish' : 'English'}`}
             >
               <Globe className="w-4 h-4" />
@@ -65,7 +65,7 @@ export default function Header() {
             {/* CTA Button - Desktop */}
             <motion.button
               onClick={() => scrollToSection('contact')}
-              className="hidden lg:block bg-parley-gold hover:bg-parley-gold-light text-parley-navy font-semibold px-5 py-2.5 rounded-lg transition-colors"
+              className="hidden lg:block bg-parley-gold hover:bg-parley-gold-light text-parley-navy font-semibold px-5 py-2.5 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-parley-navy"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -75,8 +75,9 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden text-white p-2"
-              aria-label="Toggle menu"
+              className="lg:hidden text-white p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold rounded"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -95,25 +96,25 @@ export default function Header() {
           <nav className="flex flex-col px-4 py-4 gap-4">
             <button
               onClick={() => scrollToSection('features')}
-              className="text-white/80 hover:text-white transition-colors text-left py-2"
+              className="text-white/80 hover:text-white transition-colors text-left py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold rounded"
             >
               {t.nav.features}
             </button>
             <button
               onClick={() => scrollToSection('how-it-works')}
-              className="text-white/80 hover:text-white transition-colors text-left py-2"
+              className="text-white/80 hover:text-white transition-colors text-left py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold rounded"
             >
               {t.nav.howItWorks}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-white/80 hover:text-white transition-colors text-left py-2"
+              className="text-white/80 hover:text-white transition-colors text-left py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold rounded"
             >
               {t.nav.contact}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-parley-gold hover:bg-parley-gold-light text-parley-navy font-semibold px-5 py-3 rounded-lg transition-colors mt-2"
+              className="bg-parley-gold hover:bg-parley-gold-light text-parley-navy font-semibold px-5 py-3 rounded-lg transition-colors mt-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-parley-navy"
             >
               {t.nav.requestDemo}
             </button>

@@ -44,8 +44,8 @@ export default function AdvancedCapabilities() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.1 * index }}
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow cursor-default"
+                whileHover={{ y: -3, transition: { duration: 0.2 } }}
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="w-12 h-12 bg-parley-steel/10 rounded-lg flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-parley-steel" />

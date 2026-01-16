@@ -39,6 +39,7 @@ export default function FinalCTA() {
         {/* Feather pattern */}
         <motion.div
           className="absolute top-20 left-10 opacity-5"
+          aria-hidden="true"
           animate={{
             y: [0, -10, 0],
             rotate: [0, 3, 0],
@@ -56,6 +57,7 @@ export default function FinalCTA() {
 
         <motion.div
           className="absolute bottom-20 right-10 opacity-5"
+          aria-hidden="true"
           animate={{
             y: [0, 10, 0],
             rotate: [0, -3, 0],
@@ -121,10 +123,17 @@ export default function FinalCTA() {
                   <input
                     type="text"
                     id="name"
+                    aria-invalid={errors.name ? 'true' : 'false'}
+                    aria-describedby={errors.name ? 'name-error' : undefined}
                     {...register('name', { required: true })}
-                    className={`w-full bg-white/10 border ${errors.name ? 'border-red-500' : 'border-white/20'} rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-parley-gold transition-colors`}
+                    className={`w-full bg-white/10 border ${errors.name ? 'border-red-500' : 'border-white/20'} rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-parley-gold focus:border-transparent transition-colors`}
                     placeholder="John Doe"
                   />
+                  {errors.name && (
+                    <p id="name-error" role="alert" className="text-red-400 text-sm mt-1 flex items-center gap-1">
+                      <span aria-hidden="true">*</span> {t.cta.form.nameRequired || 'Name is required'}
+                    </p>
+                  )}
                 </div>
 
                 {/* Email */}
@@ -135,13 +144,20 @@ export default function FinalCTA() {
                   <input
                     type="email"
                     id="email"
+                    aria-invalid={errors.email ? 'true' : 'false'}
+                    aria-describedby={errors.email ? 'email-error' : undefined}
                     {...register('email', {
                       required: true,
                       pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                     })}
-                    className={`w-full bg-white/10 border ${errors.email ? 'border-red-500' : 'border-white/20'} rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-parley-gold transition-colors`}
+                    className={`w-full bg-white/10 border ${errors.email ? 'border-red-500' : 'border-white/20'} rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-parley-gold focus:border-transparent transition-colors`}
                     placeholder="john@company.com"
                   />
+                  {errors.email && (
+                    <p id="email-error" role="alert" className="text-red-400 text-sm mt-1 flex items-center gap-1">
+                      <span aria-hidden="true">*</span> {errors.email.type === 'pattern' ? (t.cta.form.emailInvalid || 'Please enter a valid email') : (t.cta.form.emailRequired || 'Email is required')}
+                    </p>
+                  )}
                 </div>
 
                 {/* Organization */}
@@ -152,22 +168,29 @@ export default function FinalCTA() {
                   <input
                     type="text"
                     id="organization"
+                    aria-invalid={errors.organization ? 'true' : 'false'}
+                    aria-describedby={errors.organization ? 'organization-error' : undefined}
                     {...register('organization', { required: true })}
-                    className={`w-full bg-white/10 border ${errors.organization ? 'border-red-500' : 'border-white/20'} rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-parley-gold transition-colors`}
+                    className={`w-full bg-white/10 border ${errors.organization ? 'border-red-500' : 'border-white/20'} rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-parley-gold focus:border-transparent transition-colors`}
                     placeholder="Company Inc."
                   />
+                  {errors.organization && (
+                    <p id="organization-error" role="alert" className="text-red-400 text-sm mt-1 flex items-center gap-1">
+                      <span aria-hidden="true">*</span> {t.cta.form.organizationRequired || 'Organization is required'}
+                    </p>
+                  )}
                 </div>
 
                 {/* Role */}
                 <div>
                   <label htmlFor="role" className="block text-white/80 text-sm font-medium mb-2">
-                    {t.cta.form.role}
+                    {t.cta.form.role} <span className="text-white/40">({t.cta.form.optional || 'Optional'})</span>
                   </label>
                   <input
                     type="text"
                     id="role"
                     {...register('role')}
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-parley-gold transition-colors"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-parley-gold focus:border-transparent transition-colors"
                     placeholder="Director of Government Affairs"
                   />
                 </div>
@@ -176,19 +199,19 @@ export default function FinalCTA() {
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-parley-gold hover:bg-parley-gold-light disabled:bg-parley-gold/50 text-parley-navy font-semibold px-8 py-4 rounded-lg transition-all flex items-center justify-center gap-2"
+                  className="w-full bg-parley-gold hover:bg-parley-gold-light disabled:bg-parley-gold/50 disabled:cursor-not-allowed text-parley-navy font-semibold px-8 py-4 rounded-lg transition-all flex items-center justify-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-parley-navy"
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
                 >
                   {isSubmitting ? (
                     <>
-                      <Loader2 className="w-5 h-5 animate-spin" />
-                      Submitting...
+                      <Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" />
+                      {t.cta.form.submitting || 'Submitting...'}
                     </>
                   ) : (
                     <>
                       {t.cta.form.submit}
-                      <Send className="w-5 h-5" />
+                      <Send className="w-5 h-5" aria-hidden="true" />
                     </>
                   )}
                 </motion.button>

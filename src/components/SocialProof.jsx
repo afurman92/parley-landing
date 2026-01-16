@@ -71,6 +71,7 @@ export default function SocialProof() {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.4 }}
           className="flex flex-wrap justify-center gap-8 mt-12 opacity-60"
+          aria-hidden="true"
         >
           {/* Placeholder logos for future clients */}
           <div className="h-8 w-24 bg-parley-slate/20 rounded" />

@@ -48,12 +48,16 @@ export default function UseCases() {
             return (
               <motion.div
                 key={index}
+                role="button"
+                tabIndex={0}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.1 * index }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all cursor-pointer group"
+                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all cursor-pointer group focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold focus-visible:ring-offset-2"
                 onClick={scrollToContact}
+                onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && scrollToContact()}
+                aria-label={`${item.title} - ${item.benefit}. Click to request a demo`}
               >
                 {/* Icon */}
                 <div className={`w-14 h-14 ${colors.bg} rounded-xl flex items-center justify-center mb-6`}>
