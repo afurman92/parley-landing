@@ -25,8 +25,8 @@
   --font-display: 'Inter', system-ui, sans-serif;
 }
 
-/* Dark mode variant */
-@variant dark (&:where(.dark, .dark *));
+/* Dark mode - class-based */
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Base styles */
 html {
