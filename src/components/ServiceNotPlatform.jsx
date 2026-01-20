@@ -9,7 +9,7 @@ export default function ServiceNotPlatform() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-20 lg:py-28 bg-white">
+    <section ref={ref} className="py-20 lg:py-28 bg-white dark:bg-dark-bg transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -17,10 +17,10 @@ export default function ServiceNotPlatform() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-parley-navy mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-parley-navy dark:text-white mb-4">
             {t.service.title}
           </h2>
-          <p className="text-lg text-parley-slate max-w-2xl mx-auto">
+          <p className="text-lg text-parley-slate dark:text-parley-slate/80 max-w-2xl mx-auto">
             {t.service.subtitle}
           </p>
         </motion.div>
@@ -30,7 +30,7 @@ export default function ServiceNotPlatform() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.2 }}
-          className="text-center text-parley-slate max-w-3xl mx-auto mb-12"
+          className="text-center text-parley-slate dark:text-parley-slate/80 max-w-3xl mx-auto mb-12"
         >
           {t.service.description}
         </motion.p>
@@ -43,12 +43,12 @@ export default function ServiceNotPlatform() {
           className="grid md:grid-cols-2 gap-6 mb-16"
         >
           {/* Platform Column */}
-          <div className="bg-parley-light-gray rounded-2xl p-8">
+          <div className="bg-parley-light-gray dark:bg-dark-surface rounded-2xl p-8">
             <div className="text-center mb-6">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-parley-slate/20 rounded-full mb-4">
                 <X className="w-6 h-6 text-parley-slate" />
               </div>
-              <h3 className="text-xl font-bold text-parley-navy">
+              <h3 className="text-xl font-bold text-parley-navy dark:text-white">
                 {t.service.comparison.platform.title}
               </h3>
             </div>
@@ -112,29 +112,29 @@ export default function ServiceNotPlatform() {
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {/* Years */}
-          <div className="bg-parley-light-gray rounded-xl p-6 text-center">
+          <div className="bg-parley-light-gray dark:bg-dark-surface rounded-xl p-6 text-center">
             <div className="inline-flex items-center justify-center w-12 h-12 bg-parley-gold/20 rounded-full mb-4">
               <Award className="w-6 h-6 text-parley-gold" />
             </div>
-            <p className="text-4xl font-bold text-parley-navy mb-1">{t.service.stats.years}</p>
+            <p className="text-4xl font-bold text-parley-navy dark:text-white mb-1">{t.service.stats.years}</p>
             <p className="text-parley-slate">{t.service.stats.yearsLabel}</p>
           </div>
 
           {/* Clients */}
-          <div className="bg-parley-light-gray rounded-xl p-6 text-center">
+          <div className="bg-parley-light-gray dark:bg-dark-surface rounded-xl p-6 text-center">
             <div className="inline-flex items-center justify-center w-12 h-12 bg-parley-blue/20 rounded-full mb-4">
               <Users className="w-6 h-6 text-parley-blue" />
             </div>
-            <p className="text-4xl font-bold text-parley-navy mb-1">{t.service.stats.clients}</p>
+            <p className="text-4xl font-bold text-parley-navy dark:text-white mb-1">{t.service.stats.clients}</p>
             <p className="text-parley-slate">{t.service.stats.clientsLabel}</p>
           </div>
 
           {/* Compliance */}
-          <div className="bg-parley-light-gray rounded-xl p-6 text-center">
+          <div className="bg-parley-light-gray dark:bg-dark-surface rounded-xl p-6 text-center">
             <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4">
               <Shield className="w-6 h-6 text-green-600" />
             </div>
-            <p className="text-4xl font-bold text-parley-navy mb-1">{t.service.stats.compliance}</p>
+            <p className="text-4xl font-bold text-parley-navy dark:text-white mb-1">{t.service.stats.compliance}</p>
             <p className="text-parley-slate">{t.service.stats.complianceLabel}</p>
           </div>
         </motion.div>

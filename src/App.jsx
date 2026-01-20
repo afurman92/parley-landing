@@ -1,4 +1,5 @@
 import { LanguageProvider } from './hooks/useLanguage';
+import { ThemeProvider } from './hooks/useTheme';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import SpeedBanner from './components/SpeedBanner';
@@ -16,8 +17,9 @@ import './index.css';
 
 function App() {
   return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-white">
+    <ThemeProvider>
+      <LanguageProvider>
+        <div className="min-h-screen bg-white dark:bg-parley-navy transition-colors duration-300">
         <Header />
         <main>
           <Hero />
@@ -33,8 +35,9 @@ function App() {
           <FinalCTA />
         </main>
         <Footer />
-      </div>
-    </LanguageProvider>
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 

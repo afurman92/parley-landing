@@ -12,7 +12,7 @@ export const translations = {
     // Hero Section
     hero: {
       badge: "25+ Years of Experience",
-      headline: "Real-Time Political Intelligence.",
+      headline: "Real-Time Public Affairs Intelligence.",
       headlineAccent: "Better Decisions.",
       subheadline: "We're a service, not just a platform. 25+ years of experience delivering actionable intelligence when you need it most.",
       cta: "Request Demo",
@@ -36,7 +36,7 @@ export const translations = {
     // Problem Statement
     problem: {
       title: "Stop Wasting Hours. Start Taking Action.",
-      subtitle: "Transform how your team tracks political activity",
+      subtitle: "Transform how your team tracks public affairs",
       before: {
         title: "Before PARLEY",
         items: [
@@ -246,8 +246,8 @@ export const translations = {
 
     // Final CTA
     cta: {
-      title: "Ready to Transform Your Political Intelligence?",
-      subtitle: "Join organizations that trust PARLEY for real-time parliamentary monitoring",
+      title: "Ready to Transform Your Public Affairs Intelligence?",
+      subtitle: "Join organizations that trust PARLEY for real-time monitoring",
       button: "Request Your Personalized Demo",
       alternative: "Or talk to an expert",
       form: {
@@ -303,7 +303,7 @@ export const translations = {
     // Hero Section
     hero: {
       badge: "25+ Años de Experiencia",
-      headline: "Inteligencia Política en Tiempo Real.",
+      headline: "Inteligencia de Asuntos Públicos en Tiempo Real.",
       headlineAccent: "Mejores Decisiones.",
       subheadline: "Somos un servicio, no solo una plataforma. Más de 25 años de experiencia entregando inteligencia accionable cuando más la necesitas.",
       cta: "Solicitar Demo",
@@ -327,7 +327,7 @@ export const translations = {
     // Problem Statement
     problem: {
       title: "Deja de Perder Horas. Empieza a Actuar.",
-      subtitle: "Transforma cómo tu equipo monitorea la actividad política",
+      subtitle: "Transforma cómo tu equipo monitorea los asuntos públicos",
       before: {
         title: "Sin PARLEY",
         items: [
@@ -537,8 +537,8 @@ export const translations = {
 
     // Final CTA
     cta: {
-      title: "¿Listo para Transformar tu Inteligencia Política?",
-      subtitle: "Únete a organizaciones que confían en PARLEY para monitoreo parlamentario en tiempo real",
+      title: "¿Listo para Transformar tu Inteligencia de Asuntos Públicos?",
+      subtitle: "Únete a organizaciones que confían en PARLEY para monitoreo en tiempo real",
       button: "Solicita tu Demo Personalizada",
       alternative: "O habla con un experto",
       form: {

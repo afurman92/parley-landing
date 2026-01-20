@@ -12,7 +12,7 @@ export default function ProblemStatement() {
   const afterIcons = [Bell, FileSearch, Clock, LayoutDashboard];
 
   return (
-    <section ref={ref} id="how-it-works" className="py-20 lg:py-28 bg-white">
+    <section ref={ref} id="how-it-works" className="py-20 lg:py-28 bg-white dark:bg-dark-bg transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -20,10 +20,10 @@ export default function ProblemStatement() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-parley-navy mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-parley-navy dark:text-white mb-4">
             {t.problem.title}
           </h2>
-          <p className="text-lg text-parley-slate max-w-2xl mx-auto">
+          <p className="text-lg text-parley-slate dark:text-parley-slate/80 max-w-2xl mx-auto">
             {t.problem.subtitle}
           </p>
         </motion.div>
@@ -35,7 +35,7 @@ export default function ProblemStatement() {
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2 }}
-            className="bg-parley-light-gray rounded-2xl p-8 relative overflow-hidden"
+            className="bg-parley-light-gray dark:bg-dark-surface rounded-2xl p-8 relative overflow-hidden"
           >
             {/* Subtle X pattern in background */}
             <div className="absolute top-4 right-4 opacity-5">

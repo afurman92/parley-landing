@@ -23,7 +23,7 @@ export default function UseCases() {
   };
 
   return (
-    <section ref={ref} className="py-20 lg:py-28 bg-parley-light-gray">
+    <section ref={ref} className="py-20 lg:py-28 bg-parley-light-gray dark:bg-dark-surface transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -31,10 +31,10 @@ export default function UseCases() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-parley-navy mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-parley-navy dark:text-white mb-4">
             {t.useCases.title}
           </h2>
-          <p className="text-lg text-parley-slate max-w-2xl mx-auto">
+          <p className="text-lg text-parley-slate dark:text-parley-slate/80 max-w-2xl mx-auto">
             {t.useCases.subtitle}
           </p>
         </motion.div>
@@ -54,7 +54,7 @@ export default function UseCases() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.1 * index }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all cursor-pointer group focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold focus-visible:ring-offset-2"
+                className="bg-white dark:bg-dark-bg rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all cursor-pointer group focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold focus-visible:ring-offset-2"
                 onClick={scrollToContact}
                 onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && scrollToContact()}
                 aria-label={`${item.title} - ${item.benefit}. Click to request a demo`}
@@ -65,12 +65,12 @@ export default function UseCases() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-parley-navy mb-3">
+                <h3 className="text-xl font-bold text-parley-navy dark:text-white mb-3">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-parley-slate mb-6">
+                <p className="text-parley-slate dark:text-parley-slate/80 mb-6">
                   {item.description}
                 </p>
 

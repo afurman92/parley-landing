@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, Sun, Moon } from 'lucide-react';
 import { useLanguage } from '../hooks/useLanguage';
+import { useTheme } from '../hooks/useTheme';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, toggleLanguage, t } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -51,11 +53,24 @@ export default function Header() {
           </nav>
 
           {/* Right Side Actions */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="flex items-center justify-center text-white/80 hover:text-white transition-colors p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold rounded"
+              aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+            >
+              {theme === 'light' ? (
+                <Moon className="w-4 h-4" />
+              ) : (
+                <Sun className="w-4 h-4" />
+              )}
+            </button>
+
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-1.5 text-white/80 hover:text-white transition-colors text-sm p-2 -m-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold rounded"
+              className="flex items-center gap-1.5 text-white/80 hover:text-white transition-colors text-sm p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-parley-gold rounded"
               aria-label={`Switch to ${language === 'en' ? 'Spanish' : 'English'}`}
             >
               <Globe className="w-4 h-4" />

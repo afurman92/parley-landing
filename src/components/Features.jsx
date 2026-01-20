@@ -9,7 +9,7 @@ export default function Features() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} id="features" className="py-20 lg:py-28 bg-parley-light-gray">
+    <section ref={ref} id="features" className="py-20 lg:py-28 bg-parley-light-gray dark:bg-dark-surface transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -17,10 +17,10 @@ export default function Features() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-parley-navy mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-parley-navy dark:text-white mb-4">
             {t.features.sectionTitle}
           </h2>
-          <p className="text-lg text-parley-slate max-w-2xl mx-auto">
+          <p className="text-lg text-parley-slate dark:text-parley-slate/80 max-w-2xl mx-auto">
             {t.features.sectionSubtitle}
           </p>
         </motion.div>
@@ -32,7 +32,7 @@ export default function Features() {
           transition={{ delay: 0.2 }}
           className="mb-16"
         >
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-parley-gold">
+          <div className="bg-white dark:bg-dark-bg rounded-2xl shadow-lg overflow-hidden border-2 border-parley-gold">
             <div className="grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
               {/* Content */}
               <div>
@@ -41,10 +41,10 @@ export default function Features() {
                     {t.features.alerts.badge}
                   </span>
                 </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-parley-navy mb-2">
+                <h3 className="text-2xl lg:text-3xl font-bold text-parley-navy dark:text-white mb-2">
                   {t.features.alerts.title}
                 </h3>
-                <p className="text-parley-slate mb-4">
+                <p className="text-parley-slate dark:text-parley-slate/80 mb-4">
                   {t.features.alerts.subtitle}
                 </p>
 
@@ -52,12 +52,12 @@ export default function Features() {
                 <div className="flex items-center gap-3 bg-parley-gold/10 rounded-lg p-4 mb-6">
                   <Clock className="w-8 h-8 text-parley-gold" />
                   <div>
-                    <p className="text-2xl font-bold text-parley-navy">{t.features.alerts.time}</p>
+                    <p className="text-2xl font-bold text-parley-navy dark:text-white">{t.features.alerts.time}</p>
                     <p className="text-sm text-parley-slate">{t.features.alerts.timeDesc}</p>
                   </div>
                 </div>
 
-                <p className="text-parley-slate mb-6">
+                <p className="text-parley-slate dark:text-parley-slate/80 mb-6">
                   {t.features.alerts.description}
                 </p>
 
@@ -65,7 +65,7 @@ export default function Features() {
                   {t.features.alerts.features.map((feature, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-parley-gold flex-shrink-0" />
-                      <span className="text-parley-navy">{feature}</span>
+                      <span className="text-parley-navy dark:text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -143,11 +143,11 @@ export default function Features() {
           transition={{ delay: 0.3 }}
           className="mb-16"
         >
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="bg-white dark:bg-dark-bg rounded-2xl shadow-lg overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
               {/* Visual Mock - Left on this one */}
               <div className="relative order-2 lg:order-1">
-                <div className="bg-parley-light-gray rounded-xl p-6 h-full">
+                <div className="bg-parley-light-gray dark:bg-dark-surface rounded-xl p-6 h-full">
                   <div className="flex items-center gap-2 mb-4">
                     <FileText className="w-5 h-5 text-parley-steel" />
                     <span className="text-parley-navy font-semibold">Synaptic Report®</span>
@@ -195,10 +195,10 @@ export default function Features() {
                     {t.features.synaptic.badge}
                   </span>
                 </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-parley-navy mb-2">
+                <h3 className="text-2xl lg:text-3xl font-bold text-parley-navy dark:text-white mb-2">
                   {t.features.synaptic.title}
                 </h3>
-                <p className="text-parley-slate mb-4">
+                <p className="text-parley-slate dark:text-parley-slate/80 mb-4">
                   {t.features.synaptic.subtitle}
                 </p>
 
@@ -206,12 +206,12 @@ export default function Features() {
                 <div className="flex items-center gap-3 bg-parley-blue/10 rounded-lg p-4 mb-6">
                   <Clock className="w-8 h-8 text-parley-blue" />
                   <div>
-                    <p className="text-2xl font-bold text-parley-navy">{t.features.synaptic.time}</p>
+                    <p className="text-2xl font-bold text-parley-navy dark:text-white">{t.features.synaptic.time}</p>
                     <p className="text-sm text-parley-slate">{t.features.synaptic.timeDesc}</p>
                   </div>
                 </div>
 
-                <p className="text-parley-slate mb-6">
+                <p className="text-parley-slate dark:text-parley-slate/80 mb-6">
                   {t.features.synaptic.description}
                 </p>
 
@@ -219,7 +219,7 @@ export default function Features() {
                   {t.features.synaptic.features.map((feature, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-parley-blue flex-shrink-0" />
-                      <span className="text-parley-navy">{feature}</span>
+                      <span className="text-parley-navy dark:text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -234,7 +234,7 @@ export default function Features() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.4 }}
         >
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="bg-white dark:bg-dark-bg rounded-2xl shadow-lg overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
               {/* Content */}
               <div>
@@ -243,14 +243,14 @@ export default function Features() {
                     {t.features.summaries.badge}
                   </span>
                 </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-parley-navy mb-2">
+                <h3 className="text-2xl lg:text-3xl font-bold text-parley-navy dark:text-white mb-2">
                   {t.features.summaries.title}
                 </h3>
-                <p className="text-parley-slate mb-6">
+                <p className="text-parley-slate dark:text-parley-slate/80 mb-6">
                   {t.features.summaries.subtitle}
                 </p>
 
-                <p className="text-parley-slate mb-6">
+                <p className="text-parley-slate dark:text-parley-slate/80 mb-6">
                   {t.features.summaries.description}
                 </p>
 
@@ -258,7 +258,7 @@ export default function Features() {
                   {t.features.summaries.features.map((feature, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <Check className="w-5 h-5 text-parley-steel flex-shrink-0" />
-                      <span className="text-parley-navy">{feature}</span>
+                      <span className="text-parley-navy dark:text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>

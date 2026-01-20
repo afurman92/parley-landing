@@ -15,10 +15,18 @@
   --color-parley-gold-light: #D4BC8E;
   --color-parley-gold-dark: #9A7B4A;
 
+  /* Dark mode colors */
+  --color-dark-bg: #0D1117;
+  --color-dark-surface: #161B22;
+  --color-dark-border: #30363D;
+
   /* Fonts */
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Inter', system-ui, sans-serif;
 }
+
+/* Dark mode variant */
+@variant dark (&:where(.dark, .dark *));
 
 /* Base styles */
 html {
