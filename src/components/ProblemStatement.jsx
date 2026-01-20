@@ -43,7 +43,7 @@ export default function ProblemStatement() {
             </div>
 
             <div className="relative">
-              <div className="inline-flex items-center gap-2 bg-red-100 text-red-600 rounded-full px-4 py-1.5 mb-6">
+              <div className="inline-flex items-center gap-2 bg-red-100 dark:bg-red-500/20 text-red-600 dark:text-red-400 rounded-full px-4 py-1.5 mb-6">
                 <X className="w-4 h-4" />
                 <span className="text-sm font-semibold">{t.problem.before.title}</span>
               </div>
@@ -59,10 +59,10 @@ export default function ProblemStatement() {
                       transition={{ delay: 0.3 + index * 0.1 }}
                       className="flex items-start gap-3"
                     >
-                      <div className="flex-shrink-0 w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
-                        <Icon className="w-4 h-4 text-red-500" />
+                      <div className="flex-shrink-0 w-8 h-8 bg-red-100 dark:bg-red-500/20 rounded-lg flex items-center justify-center">
+                        <Icon className="w-4 h-4 text-red-500 dark:text-red-400" />
                       </div>
-                      <span className="text-parley-navy/80 pt-1">{item}</span>
+                      <span className="text-parley-navy/80 dark:text-white/80 pt-1">{item}</span>
                     </motion.li>
                   );
                 })}
@@ -73,7 +73,7 @@ export default function ProblemStatement() {
                 <div className="flex items-center gap-3">
                   <Clock className="w-5 h-5 text-red-500" />
                   <div className="flex-1">
-                    <div className="h-3 bg-red-200 rounded-full overflow-hidden">
+                    <div className="h-3 bg-red-200 dark:bg-red-500/20 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         animate={isInView ? { width: '85%' } : {}}
@@ -82,7 +82,7 @@ export default function ProblemStatement() {
                       />
                     </div>
                   </div>
-                  <span className="text-red-600 font-semibold text-sm">10+ hrs/week</span>
+                  <span className="text-red-600 dark:text-red-400 font-semibold text-sm">10+ hrs/week</span>
                 </div>
               </div>
             </div>
