@@ -73,7 +73,7 @@ export default function StakeholderProfiles() {
               </span>
             </div>
 
-            <h2 className="text-3xl lg:text-4xl font-bold text-parley-navy mb-4">
+            <h2 className="font-display text-3xl lg:text-4xl font-bold text-parley-navy mb-4">
               {t.stakeholder?.title || 'Know Every Political Actor'}
             </h2>
 

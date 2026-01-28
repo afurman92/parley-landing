@@ -66,7 +66,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               {t.hero.headline}
               <br />
               <span className="text-parley-gold">{t.hero.headlineAccent}</span>

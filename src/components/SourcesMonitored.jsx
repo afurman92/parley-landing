@@ -33,7 +33,7 @@ export default function SourcesMonitored() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+          <h2 className="font-display text-3xl lg:text-4xl font-bold text-white mb-4">
             {t.sources.title}
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">

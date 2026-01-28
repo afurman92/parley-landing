@@ -17,7 +17,7 @@ export default function SocialProof() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-parley-navy mb-4">
+          <h2 className="font-display text-3xl lg:text-4xl font-bold text-parley-navy mb-4">
             {t.testimonial.title}
           </h2>
         </motion.div>

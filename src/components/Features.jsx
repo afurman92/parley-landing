@@ -17,7 +17,7 @@ export default function Features() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-parley-navy dark:text-white mb-4">
+          <h2 className="font-display text-3xl lg:text-4xl font-bold text-parley-navy dark:text-white mb-4">
             {t.features.sectionTitle}
           </h2>
           <p className="text-lg text-parley-slate dark:text-parley-slate/80 max-w-2xl mx-auto">
@@ -41,7 +41,7 @@ export default function Features() {
                     {t.features.alerts.badge}
                   </span>
                 </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-parley-navy dark:text-white mb-2">
+                <h3 className="font-display text-2xl lg:text-3xl font-bold text-parley-navy dark:text-white mb-2">
                   {t.features.alerts.title}
                 </h3>
                 <p className="text-parley-slate dark:text-parley-slate/80 mb-4">
@@ -195,7 +195,7 @@ export default function Features() {
                     {t.features.synaptic.badge}
                   </span>
                 </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-parley-navy dark:text-white mb-2">
+                <h3 className="font-display text-2xl lg:text-3xl font-bold text-parley-navy dark:text-white mb-2">
                   {t.features.synaptic.title}
                 </h3>
                 <p className="text-parley-slate dark:text-parley-slate/80 mb-4">
@@ -243,7 +243,7 @@ export default function Features() {
                     {t.features.summaries.badge}
                   </span>
                 </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-parley-navy dark:text-white mb-2">
+                <h3 className="font-display text-2xl lg:text-3xl font-bold text-parley-navy dark:text-white mb-2">
                   {t.features.summaries.title}
                 </h3>
                 <p className="text-parley-slate dark:text-parley-slate/80 mb-6">

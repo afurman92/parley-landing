@@ -84,7 +84,7 @@ export default function FinalCTA() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-3xl lg:text-4xl font-bold text-white mb-4">
               {t.cta.title}
             </h2>
             <p className="text-lg text-white/70 mb-8">
