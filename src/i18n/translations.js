@@ -580,7 +580,7 @@ export const translations = {
       },
       contact: "hello@daat.cloud",
       copyright: "© 2026 PARLEY por DAAT. Todos los derechos reservados.",
-      poweredBy: "Desarrollado por",
+      poweredBy: "Powered by",
       withHelpOf: "Con la ayuda de",
     },
   },
