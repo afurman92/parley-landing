@@ -287,6 +287,8 @@ export const translations = {
       },
       contact: "hello@daat.cloud",
       copyright: "© 2026 PARLEY by DAAT. All rights reserved.",
+      poweredBy: "Powered by",
+      withHelpOf: "With the help of",
     },
   },
 
@@ -578,6 +580,8 @@ export const translations = {
       },
       contact: "hello@daat.cloud",
       copyright: "© 2026 PARLEY por DAAT. Todos los derechos reservados.",
+      poweredBy: "Desarrollado por",
+      withHelpOf: "Con la ayuda de",
     },
   },
 };

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
 import { useLanguage } from '../hooks/useLanguage';
 
@@ -82,7 +81,45 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Divider */}
+        {/* Partners Section */}
+        <div className="border-t border-white/10 pt-8 mb-8">
+          <div className="flex flex-col items-center gap-6">
+            {/* Powered by Stakemanager */}
+            <div className="flex flex-col sm:flex-row items-center gap-3">
+              <span className="text-white/60 text-sm">{t.footer.poweredBy}</span>
+              <a href="https://stakemanager.com" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                <img
+                  src="/logo-stakemanager.png"
+                  alt="Stakemanager"
+                  className="h-8 w-auto invert"
+                />
+              </a>
+            </div>
+
+            {/* With the help of */}
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <span className="text-white/60 text-sm">{t.footer.withHelpOf}</span>
+              <div className="flex items-center gap-6">
+                <a href="https://www.investottawa.ca" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                  <img
+                    src="/logo-invest-ottawa.jpg"
+                    alt="Invest Ottawa"
+                    className="h-8 w-auto"
+                  />
+                </a>
+                <a href="https://proinnovate.gob.pe" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                  <img
+                    src="/logo-proinnovate.png"
+                    alt="ProInnovate"
+                    className="h-8 w-auto"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Copyright */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-4">
